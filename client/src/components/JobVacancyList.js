@@ -11,12 +11,12 @@ export default function JobVacancyList() {
 		dispatch(fetchJobVacancy()).catch((err) => {
 			console.log(err);
 		});
-	});
+	}, []);
 
 	return (
 		<>
 			<h1>Lowongan Pekerjaan:</h1>
-			<div class="row row-cols-1 row-cols-md-3 g-4">
+			<div className="row row-cols-1 row-cols-md-3 g-4">
 				{jobsVacancy.map((job, index) => (
 					<JobVacancyCard job={job} key={index} />
 				))}

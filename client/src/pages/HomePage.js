@@ -5,9 +5,9 @@ export default function HomePage() {
 	return (
 		<>
 			<NavbarComponent />
-      <div className="container">
-			<Outlet />
-      </div>
+			<div className="container">
+				<Outlet />
+			</div>
 		</>
 	);
 }
