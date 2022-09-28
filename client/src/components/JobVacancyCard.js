@@ -14,6 +14,7 @@ export default function JobVacancyCard({ job }) {
 					src={job.corporateLogo}
 					className="card-img-top mx-auto p-3 d-block"
 					style={{ width: 200, height: 100, objectFit: "contain" }}
+          alt="company logo"
 				/>
 				<div className="card-body">
 					<h5 className="card-title">{job.corporateName}</h5>
