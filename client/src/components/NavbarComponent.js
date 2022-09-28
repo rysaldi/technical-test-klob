@@ -6,7 +6,7 @@ export default function NavbarComponent() {
 			<div className="container d-flex justify-content-between">
 				<div>
 					<Link to="/" className="navbar-brand">
-						Klob
+						<img src="https://static.klob.id/img/landing-klobmeter-doors/klobicon.svg" alt="klob"/>
 					</Link>
 				</div>
 				<div>

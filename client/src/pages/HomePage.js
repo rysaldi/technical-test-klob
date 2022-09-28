@@ -5,7 +5,7 @@ export default function HomePage() {
 	return (
 		<>
 			<NavbarComponent />
-			<div className="container">
+			<div className="container mt-3">
 				<Outlet />
 			</div>
 		</>

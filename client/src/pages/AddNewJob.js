@@ -34,9 +34,9 @@ export default function AddNewJob() {
 
 	return (
 		<div className="container">
-			<h1>Buat Lowongan :</h1>
+			<h1 className="mb-4">Buat Lowongan :</h1>
 
-			<form onSubmit={submitHandler}>
+			<form onSubmit={submitHandler} className="needs-validation">
 				<div className="mb-3">
 					<label className="form-label">Logo Perusahaan</label>
 					<input
@@ -46,6 +46,7 @@ export default function AddNewJob() {
 						placeholder="Ketikan Logo Perusahaan"
 						value={newJob.corporateLogo}
 						onChange={changeInputNewJob}
+						required
 					/>
 					<span className="text-muted">Dalam bentuk link url</span>
 				</div>
@@ -58,6 +59,7 @@ export default function AddNewJob() {
 						placeholder="Ketikan Nama Perusahaan"
 						value={newJob.corporateName}
 						onChange={changeInputNewJob}
+						required
 					/>
 				</div>
 				<div className="mb-3">
@@ -69,6 +71,7 @@ export default function AddNewJob() {
 						placeholder="Ketikan Nama Lowongan"
 						value={newJob.positionName}
 						onChange={changeInputNewJob}
+						required
 					/>
 				</div>
 				<div className="mb-3">
@@ -80,6 +83,7 @@ export default function AddNewJob() {
 						placeholder="Ketikan Status Karyawan"
 						value={newJob.status}
 						onChange={changeInputNewJob}
+						required
 					/>
 				</div>
 				<div className="mb-3">
@@ -93,6 +97,7 @@ export default function AddNewJob() {
 								placeholder="1.000.000"
 								value={newJob.salaryFrom}
 								onChange={changeInputNewJob}
+								required
 							/>
 						</div>
 						<div className="col-2 d-flex align-items-center justify-content-center">
@@ -106,6 +111,7 @@ export default function AddNewJob() {
 								placeholder="10.000.000"
 								value={newJob.salaryTo}
 								onChange={changeInputNewJob}
+								required
 							/>
 						</div>
 					</div>
@@ -118,6 +124,7 @@ export default function AddNewJob() {
 						className="form-control"
 						value={newJob.postedDate}
 						onChange={changeInputNewJob}
+						required
 					/>
 				</div>
 				<div>

@@ -5,7 +5,7 @@ import JobVacancyCard from "./JobVacancyCard";
 
 export default function JobVacancyList() {
 	const dispatch = useDispatch();
-	const { jobsVacancy } = useSelector((state) => state.jobs);
+	const { jobsVacancy, newJobVacancy } = useSelector((state) => state.jobs);
 
 	useEffect(() => {
 		dispatch(fetchJobVacancy()).catch((err) => {
@@ -15,11 +15,13 @@ export default function JobVacancyList() {
 
 	return (
 		<>
-			<h1>Lowongan Pekerjaan:</h1>
-			<div className="row row-cols-1 row-cols-md-3 g-4">
+			<h1 className="mb-4">Lowongan Pekerjaan:</h1>
+			<div className="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 g-4">
 				{jobsVacancy.map((job, index) => (
 					<JobVacancyCard job={job} key={index} />
 				))}
+				{newJobVacancy &&
+					newJobVacancy.map((job, index) => <JobVacancyCard job={job} key={index} />)}
 			</div>
 		</>
 	);
