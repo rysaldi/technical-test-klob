@@ -1,4 +1,4 @@
-import { FETCH_JOBSVACANCY, ADD_JOBVACANCY, APPLY_JOBVACANCY } from "./actionType";
+import { FETCH_JOBSVACANCY, ADD_JOBVACANCY, APPLY_JOBVACANCY, CANCEL_APPLIEDJOBVACANCY } from "./actionType";
 
 const fetchJobsVacancySuccess = (payload) => {
 	return {
@@ -21,6 +21,13 @@ const applyJobSuccess = (payload) => {
 	};
 };
 
+const removeAppliedJobSuccess = (payload) => {
+	return {
+		type: CANCEL_APPLIEDJOBVACANCY,
+		payload
+	}
+}
+
 export const fetchJobVacancy = () => (dispatch) => {
 	return fetch("https://test-server-klob.herokuapp.com/fakeJob")
 		.then((res) => {
@@ -38,3 +45,7 @@ export const addNewJob = (payload) => (dispatch) => {
 export const addAppliedJobVacancy = (payload) => (dispatch) => {
 	dispatch(applyJobSuccess(payload));
 };
+
+export const removeAppliedJobVacancy = (payload) => (dispatch) => {
+	dispatch(removeAppliedJobSuccess(payload))
+}
