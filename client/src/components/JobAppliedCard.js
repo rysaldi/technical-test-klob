@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { removeAppliedJobVacancy } from "../store/actions/jobActions";
+import Swal from "sweetalert2";
 
 export default function JobAppliedCard({ job }) {
 	const dispatch = useDispatch();
@@ -12,6 +13,13 @@ export default function JobAppliedCard({ job }) {
 
 	const cancelApply = () => {
 		dispatch(removeAppliedJobVacancy(job));
+    Swal.fire({
+			position: "top-end",
+			icon: "success",
+			title: "successfully cancel job applied",
+			showConfirmButton: false,
+			timer: 1000,
+		});
 	};
 
 	return (

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchJobVacancy } from "../store/actions/jobActions";
 import JobAppliedCard from "../components/JobAppliedCard";
@@ -31,7 +31,6 @@ export default function AppliedJobPage() {
 				</div>
 			) : (
 				<>
-					<h1 className="mb-4">Lowongan Pekerjaan:</h1>
 					<div className="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 g-4">
 						{appliedJobVacancy.map((job, index) => (
 							<JobAppliedCard job={job} key={index} />
