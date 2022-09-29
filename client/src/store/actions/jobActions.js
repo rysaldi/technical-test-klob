@@ -1,4 +1,4 @@
-import { FETCH_JOBSVACANCY, ADD_JOBVACANCY } from "./actionType";
+import { FETCH_JOBSVACANCY, ADD_JOBVACANCY, APPLY_JOBVACANCY } from "./actionType";
 
 const fetchJobsVacancySuccess = (payload) => {
 	return {
@@ -8,9 +8,15 @@ const fetchJobsVacancySuccess = (payload) => {
 };
 
 const addNewJobSuccess = (payload) => {
-	console.log(payload);
 	return {
 		type: ADD_JOBVACANCY,
+		payload,
+	};
+};
+
+const applyJobSuccess = (payload) => {
+	return {
+		type: APPLY_JOBVACANCY,
 		payload,
 	};
 };
@@ -27,4 +33,8 @@ export const fetchJobVacancy = () => (dispatch) => {
 
 export const addNewJob = (payload) => (dispatch) => {
 	dispatch(addNewJobSuccess(payload));
+};
+
+export const addAppliedJobVacancy = (payload) => (dispatch) => {
+	dispatch(applyJobSuccess(payload));
 };

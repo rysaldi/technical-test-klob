@@ -6,7 +6,7 @@ export default function NavbarComponent() {
 			<div className="container d-flex justify-content-between">
 				<div>
 					<Link to="/" className="navbar-brand">
-						<img src="https://static.klob.id/img/landing-klobmeter-doors/klobicon.svg" alt="klob"/>
+						<img src="https://static.klob.id/img/landing-klobmeter-doors/klobicon.svg" alt="klob" />
 					</Link>
 				</div>
 				<div>
@@ -25,6 +25,11 @@ export default function NavbarComponent() {
 							<li className="nav-item">
 								<Link to="/buat-lowongan-pekerjaan" className="nav-link" aria-current="page">
 									Buat Lowongan
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link to="/lamaran-terkirim" className="nav-link" aria-current="page">
+									Lamaran Terkirim
 								</Link>
 							</li>
 						</ul>

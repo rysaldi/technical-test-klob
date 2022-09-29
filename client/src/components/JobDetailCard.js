@@ -33,7 +33,7 @@ export default function JobDetailCard() {
 
 	return (
 		<>
-			{loadingDetail && <LoadingComponent/>}
+			{loadingDetail && <LoadingComponent />}
 			{!loadingDetail && (
 				<div className="card">
 					<img
@@ -44,7 +44,7 @@ export default function JobDetailCard() {
 					/>
 					<div className="card-body">
 						<h5 className="card-title">{detailJob.corporateName}</h5>
-						<div dangerouslySetInnerHTML={{__html: detailJob.descriptions }} />
+						<div dangerouslySetInnerHTML={{ __html: detailJob.descriptions }} />
 						<p className="card-text">{detailJob.positionName}</p>
 						<p className="card-text mb-0 ">
 							Status : <p className="badge bg-secondary">{detailJob.status}</p>
@@ -62,7 +62,7 @@ export default function JobDetailCard() {
 							</p>
 						</p>
 						<p className="card-text">{detailJob.postedDate}</p>
-						<button className="btn btn-success form-control">Kirim Lamaran</button>
+						<button className="btn btn-success form-control">KIRIM LAMARAN</button>
 					</div>
 				</div>
 			)}
